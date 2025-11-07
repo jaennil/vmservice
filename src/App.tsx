@@ -122,8 +122,8 @@ const App: React.FC = () => {
                 <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
               ))}
             </div>
-            <span className="text-2xl font-bold">4,8</span>
-            <span className="text-gray-300">(18 оценок)</span>
+            <span className="text-2xl font-bold">4,9</span>
+            <span className="text-gray-300">(19 оценок)</span>
           </div>
           <a href="#contacts" onClick={(e) => smoothScroll(e, '#contacts')} className="inline-block bg-red-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-700 transition transform hover:scale-105">
             Записаться на ремонт
