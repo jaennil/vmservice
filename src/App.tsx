@@ -249,7 +249,7 @@ const App: React.FC = () => {
                 <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A464f3fd867514f726a85f9dd728bd99fe177ba410536d033b90d1d98970b225c&amp;source=constructor"
                     width="500"
                     height="400"
-                    frameborder="0"
+                    frameBorder="0"
                     title="Яндекс Карты"
                     className="w-full h-full"
                 />
