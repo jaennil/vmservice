@@ -1,0 +1,18 @@
+services:
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./nginx/ssl:/etc/nginx/ssl
+    depends_on:
+      - vmservice
+    restart: unless-stopped
+
+  vmservice:
+    build: .
+    expose:
+      - "80"
+    restart: unless-stopped
