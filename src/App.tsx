@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Clock, MapPin, Star, Menu, X, Wrench, Settings, Gauge, Droplet, Zap, Car } from 'lucide-react';
+import { Phone, Clock, MapPin, Star, Menu, X, Wrench, Settings, Gauge, Droplet, Zap } from 'lucide-react';
 
 import workshopPhoto from './assets/workshop.jpg';
 
