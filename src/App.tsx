@@ -132,8 +132,8 @@ const App: React.FC = () => {
                 <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
               ))}
             </div>
-            <span className="text-2xl font-bold">4,9</span>
-            <span className="text-gray-300">(22 оценок)</span>
+            <span className="text-2xl font-bold">5,0</span>
+            <span className="text-gray-300">(24 отзыва)</span>
           </div>
           <a href="#contacts" onClick={(e) => smoothScroll(e, '#contacts')} className="inline-block bg-red-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-700 transition transform hover:scale-105">
             Записаться на ремонт
@@ -243,7 +243,7 @@ const App: React.FC = () => {
                 <div className="text-gray-600">довольных клиентов</div>
               </div>
               <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
-                <div className="text-4xl font-bold text-red-600 mb-2">4.9</div>
+                <div className="text-4xl font-bold text-red-600 mb-2">5.0</div>
                 <div className="text-gray-600">средняя оценка</div>
               </div>
             </div>
