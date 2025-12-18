@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vmservice
+  namespace: vmservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vmservice
+  template:
+    metadata:
+      labels:
+        app: vmservice
+    spec:
+      imagePullSecrets:
+        - name: ghcr-secret
+      containers:
+        - name: vmservice
+          image: ghcr.io/jaennil/vmservice:latest
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              memory: "32Mi"
+              cpu: "10m"
+            limits:
+              memory: "64Mi"
+              cpu: "100m"

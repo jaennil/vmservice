@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: vmservice-ingress
+  namespace: vmservice
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: vmautoservice.ru
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: vmservice
+                port:
+                  number: 80
