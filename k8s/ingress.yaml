@@ -4,7 +4,7 @@ metadata:
   name: vmservice-ingress
   namespace: vmservice
 spec:
-  ingressClassName: nginx
+  ingressClassName: traefik
   rules:
     - host: vmautoservice.ru
       http:
