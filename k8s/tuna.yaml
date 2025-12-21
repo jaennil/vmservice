@@ -16,7 +16,7 @@ spec:
       containers:
         - name: tuna
           image: yuccastream/tuna:latest
-          command: ["tuna", "http", "80", "--domain", "vmautoservice.ru"]
+          command: ["tuna", "http", "vmservice:80", "--domain", "vmautoservice.ru"]
           env:
             - name: TUNA_TOKEN
               valueFrom:
