@@ -2,6 +2,10 @@
 
 Website for VM Auto Service - a car repair shop located in Bekhteevo, Moscow region.
 
+## Location
+
+[Yandex Maps](https://yandex.ru/maps/-/CLvZRKnY)
+
 ## Tech Stack
 
 - React 19 + TypeScript
