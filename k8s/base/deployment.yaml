@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: vmservice
-  namespace: vmservice
 spec:
   replicas: 1
   selector:
@@ -26,9 +25,21 @@ spec:
         - name: ghcr-secret
       containers:
         - name: vmservice
-          image: ghcr.io/jaennil/vmservice:latest
+          image: vmservice
           ports:
             - containerPort: 80
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 10
+            periodSeconds: 30
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 30
           resources:
             requests:
               memory: "32Mi"
@@ -37,7 +48,7 @@ spec:
               memory: "64Mi"
               cpu: "100m"
         - name: nginx-exporter
-          image: nginx/nginx-prometheus-exporter:latest
+          image: nginx-exporter
           args:
             - -nginx.scrape-uri=http://localhost/stub_status
           ports:
