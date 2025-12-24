@@ -3,9 +3,15 @@ kind: Service
 metadata:
   name: vmservice
   namespace: vmservice
+  labels:
+    app: vmservice
 spec:
   selector:
     app: vmservice
   ports:
-    - port: 80
+    - name: http
+      port: 80
       targetPort: 80
+    - name: metrics
+      port: 9113
+      targetPort: 9113
