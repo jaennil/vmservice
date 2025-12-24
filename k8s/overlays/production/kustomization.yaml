@@ -4,13 +4,13 @@ kind: Kustomization
 namespace: vmservice
 
 resources:
-  - ../../base
-  - ingress.yaml
+- ../../base
+- ingress.yaml
 
 images:
-  - name: vmservice
-    newName: ghcr.io/jaennil/vmservice
-    newTag: latest
-  - name: nginx-exporter
-    newName: nginx/nginx-prometheus-exporter
-    newTag: "1.1.0"
+- name: nginx-exporter
+  newName: nginx/nginx-prometheus-exporter
+  newTag: 1.1.0
+- name: vmservice
+  newName: ghcr.io/jaennil/vmservice
+  newTag: e9785e02fa12b2ab9bd993a5bc6b9c5e11bf36d8
