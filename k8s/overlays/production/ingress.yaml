@@ -4,6 +4,10 @@ metadata:
   name: vmservice-ingress
 spec:
   ingressClassName: traefik
+  tls:
+    - hosts:
+        - vmautoservice.ru
+      secretName: vmservice-tls
   rules:
     - host: vmautoservice.ru
       http:
