@@ -13,4 +13,4 @@ images:
   newTag: 1.1.0
 - name: vmservice
   newName: ghcr.io/jaennil/vmservice
-  newTag: 33ed13f9cd5194bc3e64676565aad5d6d5248872
+  newTag: dcff392952773ae706de026cd30e78e26bd42c4b
