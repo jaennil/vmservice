@@ -6,6 +6,7 @@ namespace: vmservice
 resources:
 - ../../base
 - ingress.yaml
+- certificate.yaml
 
 images:
 - name: nginx-exporter
